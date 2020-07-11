@@ -1,0 +1,23 @@
+$dayHeight: 100px;
+$dayWidht :100px;
+
+@mixin oneDayProperties {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  height: $dayHeight;
+  min-width: $dayWidht;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  background-color: #eee;
+  border: 1px solid black;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+@mixin hoverDayProperties {
+  cursor: pointer;
+  background-color: pink;
+  bottom: 20px;
+}

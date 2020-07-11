@@ -1,0 +1,27 @@
+$days: ("tue" 1, "wed" 2, "thu" 3, "fri" 4, "sat" 5, "sun" 6);
+
+@each $day,$lenght in $days {
+  .calendar-#{$day} > :first-child {
+    margin-left: $lenght * $dayWidht + $lenght;
+  }
+}
+
+@for $i from 1 through 31 {
+  .calendar * :nth-child(#{$i}) {
+    @include oneDayProperties;
+  }
+  .calendar * :nth-child(#{$i})::after {
+    content: "#{$i}";
+    position: relative;
+    line-height: $dayHeight;
+  }
+  .calendar * :nth-child(#{$i}):hover {
+    @include hoverDayProperties;
+  }
+}
+
+@for $i from 28 through 30 {
+  .calendar-#{$i} > :nth-child(n + #{$i+1}) {
+    display: none;
+  }
+}

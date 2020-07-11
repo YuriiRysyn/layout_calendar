@@ -1,3 +1,19 @@
+@import "oneDayProp";
+@import "loops";
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: $dayWidht * 7 + 7px;
+  margin: 0 auto;
 }
