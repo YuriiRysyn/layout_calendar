@@ -1,5 +1,5 @@
 @import "oneDayProp";
-@import "loops";
+@import "calendarCreating";
 
 * {
   box-sizing: border-box;
@@ -14,6 +14,6 @@ body {
 .calendar {
   display: flex;
   flex-wrap: wrap;
-  width: $dayWidht * 7 + 7px;
+  width: $dayWidht * 7 + $gapBetweenCells * 7;
   margin: 0 auto;
 }

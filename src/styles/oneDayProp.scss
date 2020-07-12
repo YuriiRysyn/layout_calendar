@@ -1,15 +1,14 @@
 $dayHeight: 100px;
 $dayWidht :100px;
+$gapBetweenCells: 1px;
 
 @mixin oneDayProperties {
-  position: relative;
-  bottom: 0;
   display: flex;
   justify-content: center;
   height: $dayHeight;
   min-width: $dayWidht;
-  margin-right: 1px;
-  margin-bottom: 1px;
+  margin-right: $gapBetweenCells;
+  margin-bottom: $gapBetweenCells;
   background-color: #eee;
   border: 1px solid black;
   transition-property: all;
@@ -19,5 +18,5 @@ $dayWidht :100px;
 @mixin hoverDayProperties {
   cursor: pointer;
   background-color: pink;
-  bottom: 20px;
+  transform: translate(0, -20px);
 }
